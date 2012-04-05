@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="FibonacciMDB">
+    <output-path>$PROJECT_DIR$/out/artifacts/FibonacciMDB.war</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="FibonacciMDB" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="HelloWorldMDB/web/Web" />
+    </root>
+  </artifact>
+</component>

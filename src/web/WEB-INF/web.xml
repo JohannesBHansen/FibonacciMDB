@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+    <servlet>
+        <servlet-name>FibonacciMDBServletClient</servlet-name>
+        <servlet-class>com.herokuapp.iandownard.FibonacciMDBServletClient</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FibonacciMDBServletClient</servlet-name>
+        <url-pattern>/FibonacciMDBServletClient</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>ViewResults</display-name>
+        <servlet-name>ViewResults</servlet-name>
+        <servlet-class>com.herokuapp.iandownard.ViewResults</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewResults</servlet-name>
+        <url-pattern>/ViewResults</url-pattern>
+    </servlet-mapping>
+
+</web-app>
