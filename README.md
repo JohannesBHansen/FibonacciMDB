@@ -48,4 +48,4 @@ Author
 
 Created by Ian Downard, March 2012.
 
-[!FibonacciMDB Screenshot](http://dl.dropbox.com/u/6145542/blog%20photos/JMS%20Load%20Testing%20Screenshot.png)
+[FibonacciMDB Screenshot](http://dl.dropbox.com/u/6145542/blog%20photos/JMS%20Load%20Testing%20Screenshot.png "FibonacciMDB Screenshot")
