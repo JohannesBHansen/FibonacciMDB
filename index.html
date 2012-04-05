@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fibonaccimdb by iandow</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Fibonaccimdb</h1>
+        <p>Load testing utility for Message Driven Enterprise JavaBeans technology</p>
+        <p class="view"><a href="https://github.com/iandow/FibonacciMDB">View the Project on GitHub <small>iandow/FibonacciMDB</small></a></p>
+        <ul>
+          <li><a href="https://github.com/iandow/FibonacciMDB/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/iandow/FibonacciMDB/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/iandow/FibonacciMDB">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Message-Driven EJB Fibonacci Calculator</h1>
+
+<p>This application was written for demonstrating Enterprise Messaging through the use of JMS 1.1 and EJB 3.1 Message-Driven Bean (MDB) technology in JBoss AS 6.1.0 and later. The client in this application is implemented as JSP page, which invokes a Servlet to send numerous text messages via message-driven beans to a JMS service (HornetQ, by default). The server will "process" each message by calculating a Fibonacci sequence according to the parameters specified by the client, and insert the Fibonacci result and its elapsed processing time to an in-process database (hsqldb, by default) via JDBC. The client's web broswer will be redirect to a Servlet which continuously monitors the server's progress by reading the database records and plotting Fibonacci processing-times via Google Charts.</p>
+
+<p>This application was forked from the "helloworld-mdb" project, distributed as part of the JBoss 7.1.0 Quickstart package, available <a href="https://github.com/jbossas/quickstart.git">here</a>.</p>
+
+<p>An IntelliJ project is provided, which includes an application server configuration for running with JBoss 6.1.0.</p>
+
+<h2>Prerequisites</h2>
+
+<p>To be able to run this project, the following software must be installed on your computer:</p>
+
+<ul>
+<li>Java Development Kit (JDK) version 1.6 or later.</li>
+<li>
+<p>JBoss Application Server version 6.1.0, or later. The "FibonacciMDBQueue" must be defined in the JBoss JMS service (aka "HornetQ"). If using HornetQ, add the following lines in <code>$JBOSS_HOME/server/default/deploy/hornetq/hornetq-jms.xml</code> </p>
+
+<pre><code>           &lt;queue name="FibonacciMDBQueue"&gt;
+              &lt;entry name="/queue/FibonacciMDBQueue"/&gt;
+           &lt;/queue&gt;
+</code></pre>
+</li>
+<li><p>A Web browser</p></li>
+<li><p>(optional) IntelliJ IDEA, version 10.5 or later</p></li>
+</ul><h2>Usage</h2>
+
+<p>Running in IntelliJ:</p>
+
+<ol>
+<li> Open the project in IntelliJ</li>
+<li> Update the JBoss Run configs</li>
+<li> Update paths in Project Settings for Project, Modules, Libraries, and Artifacts </li>
+<li> Deploy and/or run the project</li>
+<li> Open, http://localhost:8080/HelloWorldMDB/</li>
+</ol><p>Running directly in JBoss 6.1.0 (without IntelliJ):</p>
+
+<ol>
+<li> Deploy the war package with, cp -R out/artifacts/HelloWorldMDB.war /opt/jboss-6.1.0.Final/server/default/deploy/</li>
+<li> Start JBoss with, /opt/jboss-6.1.0.Final/run.sh </li>
+<li> Open, http://localhost:8080/HelloWorldMDB/</li>
+</ol><h2>Author</h2>
+
+<p>Created by Ian Downard, March 2012.</p>
+
+<p><img src="http://dl.dropbox.com/u/6145542/blog%20photos/JMS%20Load%20Testing%20Screenshot.png" alt="FibonacciMDB Screenshot" title="FibonacciMDB Screenshot"></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/iandow">iandow</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
